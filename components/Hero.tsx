@@ -1,5 +1,4 @@
 import Image from "next/image";
-import profilePic from "/profile.jpg";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -10,7 +9,9 @@ export default function Hero() {
         {/* Profile Image */}
         <div className="w-full md:w-2/5 h-auto relative rounded-lg overflow-hidden shadow-lg">
           <Image
-            src={profilePic}
+            src="/profile.jpg"
+            width={500} 
+            height={500}
             alt="Profile Picture"
             layout="responsive"
             className="object-contain"
