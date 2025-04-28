@@ -9,7 +9,7 @@ export default function Hero() {
         {/* Profile Image */}
         <div className="w-full md:w-2/5 h-auto relative rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/profile.JPG"
+            src="/profile2.JPG"
             width={500} 
             height={500}
             alt="Profile Picture"
@@ -27,7 +27,7 @@ export default function Hero() {
             
           </p>
           <p className="text-lg text-gray-700 mt-2">
-            I&apos;m currently conducting research in the Fox-Kemper Research Group and part of the E-GLAMOR (Economics - Games, Learning, Agents, Modeling, Optimization, Research) Group.
+            I&apos;m currently serving as a research assistant in the Fox-Kemper Research Group and the E-GLAMOR (Economics - Games, Learning, Agents, Modeling, Optimization, Research) Group.
           </p>
           <p className="text-lg text-gray-700 mt-4">Thanks for dropping by!</p>
 
