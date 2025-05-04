@@ -4,12 +4,12 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="py-16 mt-20">
+    <section className="py-5 mt-20">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
         {/* Profile Image */}
         <div className="w-full md:w-2/5 h-auto relative rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/public/profile2.JPG"
+            src="/profile2.JPG"
             width={500} 
             height={500}
             alt="Profile Picture"
