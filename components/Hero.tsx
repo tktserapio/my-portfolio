@@ -9,7 +9,7 @@ export default function Hero() {
         {/* Profile Image */}
         <div className="w-full md:w-2/5 h-auto relative rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/profile2.JPG"
+            src="/profile2.jpg"
             width={500} 
             height={500}
             alt="Profile Picture"
