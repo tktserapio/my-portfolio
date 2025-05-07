@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="w-full md:w-3/5 max-w-2xl text-center md:text-left">
           <h1 className="text-4xl font-bold text-gray-900">Hi, I&apos;m Tyrone.</h1>
           <p className="text-lg text-gray-700 mt-4">
-            I&apos;m a student at <span className="font-bold">Brown University</span> studying Computer Science, Applied Mathematics, and Economics.
+            I&apos;m a student at <span className="font-bold">Brown University</span> studying Computer Science and Economics.
           </p>
           <p className="text-lg text-gray-700 mt-2">
             

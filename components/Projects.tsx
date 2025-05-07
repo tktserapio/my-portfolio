@@ -4,7 +4,14 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "fink.ai",
+    title: "Tidal Sensor Dashboard", 
+    description: "An interactive, web-based tidal level monitoring dashboard, improving the accessibility of climate data for RIDDC researchers and authorities.", 
+    tech: ["#React", "#Mapbox", "#Python"], 
+    image: "/tidal-sensor.png", 
+    github: "https://github.com/tktserapio"
+  },
+  {
+    title: "Fink",
     description:
       "AI note-taking platform with an integrated LLM-powered chatbot for retrieving notes from a vector embedding database. In the works to expand it to a multi-model agent/assistant.",
     tech: ["#Next.js", "#TypeScript", "#LangChain"],
@@ -20,7 +27,7 @@ const projects = [
     github: "https://github.com/tktserapio/Stream.ai",
   },
   {
-    title: "matttr",
+    title: "Matttr",
     description:
       "A platform for debaters that features condensed transcriptions of arguments on various motions. It uses Natural Language Processing (NLP) to automate transcription of speeches.",
     tech: ["#Python", "#PyTorch", "#JavaScript"],
