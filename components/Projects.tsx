@@ -16,7 +16,7 @@ const projects = [
       "AI note-taking platform with an integrated LLM-powered chatbot for retrieving notes from a vector embedding database. In the works to expand it to a multi-model agent/assistant.",
     tech: ["#Next.js", "#TypeScript", "#LangChain"],
     image: "/fink.png", // Update paths to match your images
-    github: "https://github.com/tktserapio/fink.ai",
+    github: "https://github.com/tktserapio/fink-ai",
   },
   {
     title: "stream.ai",
