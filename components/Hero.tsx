@@ -27,7 +27,7 @@ export default function Hero() {
             
           </p>
           <p className="text-lg text-gray-700 mt-2">
-            I&apos;m currently a research assistant at the E-GLAMOR (Economics - Games, Learning, Agents, Modeling, Optimization, Research) Group. My research focuses on using reinforcement learning to train more strategic LLMs in domains such as negotiation and multi-agent interaction.
+            I&apos;m currently a research assistant at the E-GLAMORGroup. My research focuses on using reinforcement learning to train more strategic LLMs in domains such as negotiation and multi-agent interaction.
           </p>
           <p className="text-lg text-gray-700 mt-4">Thanks for dropping by!</p>
 
