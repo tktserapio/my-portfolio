@@ -76,13 +76,13 @@ export default function Projects() {
                 <h3 className="text-xl font-bold">{project.title}</h3>
                 <p className="text-gray-400 mt-2">{project.description}</p>
                 {/* Tech Stack */}
-                <div className="mt-4 flex flex-wrap gap-2">
+                {/* <div className="mt-4 flex flex-wrap gap-2">
                   {project.tech.map((tag, idx) => (
                     <span key={idx} className="text-sm text-blue-400">
                       {tag}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
