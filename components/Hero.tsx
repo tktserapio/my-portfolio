@@ -21,13 +21,13 @@ export default function Hero() {
         <div className="w-full md:w-3/5 max-w-2xl text-center md:text-left">
           <h1 className="text-4xl font-bold text-gray-900">Hi, I&apos;m Tyrone.</h1>
           <p className="text-lg text-gray-700 mt-4">
-            I&apos;m a student at <span className="font-bold">Brown University</span> studying Computer Science and Economics.
+            I&apos;m a student at <span className="font-bold">Brown University</span> studying Computer Science, Applied Math, and Economics.
           </p>
           <p className="text-lg text-gray-700 mt-2">
             
           </p>
           <p className="text-lg text-gray-700 mt-2">
-            I&apos;m currently serving as a research assistant in the Fox-Kemper Research Group and the E-GLAMOR (Economics - Games, Learning, Agents, Modeling, Optimization, Research) Group.
+            I&apos;m currently a research assistant at the E-GLAMOR (Economics - Games, Learning, Agents, Modeling, Optimization, Research) Group. My research focuses on using reinforcement learning to train more strategic LLMs in domains such as negotiation and multi-agent interaction.
           </p>
           <p className="text-lg text-gray-700 mt-4">Thanks for dropping by!</p>
 
