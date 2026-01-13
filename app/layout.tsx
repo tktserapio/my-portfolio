@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-white text-gray-900 transition-colors duration-200">
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-white text-gray-900 transition-colors duration-200 snap-y snap-mandatory h-screen overflow-y-scroll">
           <Navbar />
           <main className="max-w-5xl mx-auto p-0.5">{children}</main>
       </body>

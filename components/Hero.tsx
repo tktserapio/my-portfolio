@@ -1,16 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+// import dynamic from "next/dynamic";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+// const HeroBackground = dynamic(() => import("./HeroBackground"), {
+//   ssr: false,
+// });
 
 export default function Hero() {
   return (
-    <section className="py-5 mt-20">
+    <section className="py-5 relative min-h-[80vh] flex items-center">
+      {/* <HeroBackground /> */}
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
         {/* Profile Image */}
         <div className="w-full md:w-2/5 h-auto relative rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/profile2.jpg"
-            width={500} 
+            width={500}
             height={500}
             alt="Profile Picture"
             layout="responsive"
@@ -27,7 +35,7 @@ export default function Hero() {
             
           </p>
           <p className="text-lg text-gray-700 mt-2">
-            I&apos;m currently a research assistant at the E-GLAMOR Group. My research focuses on using reinforcement learning to train more strategic LLMs in domains such as negotiation and multi-agent interaction.
+            I&apos;m currently a research assistant at the E-GLAMOR Group. My research focuses on using reinforcement learning to train more strategic LLMs in multi-agent interaction.
           </p>
           <p className="text-lg text-gray-700 mt-4">Thanks for dropping by!</p>
 
