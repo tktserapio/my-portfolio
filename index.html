@@ -8,11 +8,12 @@
     
     <style>
         :root {
-            --bg-color: #fafafa;
-            --header-bg: #ffffff;
+            --bg-color: #f7f4ef;
+            --bg-accent-1: rgba(255, 214, 170, 0.55);
+            --bg-accent-2: rgba(193, 230, 255, 0.5);
             --text-main: #1f2937;
             --text-muted: #4b5563;
-            --border-color: #e5e7eb;
+            --border-color: rgba(31, 41, 55, 0.12);
             --link-color: #111827;
         }
 
@@ -25,7 +26,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
+            background: white;
             color: var(--text-main);
             line-height: 1.6;
         }
@@ -38,17 +39,31 @@
             transform: translateX(-50%);
             max-width: 700px;
             width: calc(100% - 40px);
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(200, 210, 220, 0.5);
+            background: rgba(255, 255, 255, 0.48);
+            backdrop-filter: blur(20px) saturate(150%);
+            -webkit-backdrop-filter: blur(20px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.52);
             border-radius: 50px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 14px 38px rgba(17, 24, 39, 0.1);
             padding: 14px 32px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            border-radius: inherit;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.46) 0%,
+                rgba(255, 255, 255, 0.06) 100%
+            );
+            pointer-events: none;
         }
 
         .logo {
@@ -158,6 +173,10 @@
             border-top: 1px solid var(--border-color);
         }
 
+        #thoughts {
+            padding-bottom: 100px;
+        }
+
         .section-title {
             font-size: 2rem;
             font-weight: 700;
@@ -184,6 +203,46 @@
             margin: 0;
         }
 
+        .thoughts-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 18px;
+        }
+
+        .thought-card {
+            grid-column: span 6;
+            display: block;
+            padding: 24px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.76);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 18px 40px rgba(17, 24, 39, 0.06);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .thought-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 22px 48px rgba(17, 24, 39, 0.1);
+        }
+
+        .thought-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.25rem;
+        }
+
+        .thought-card .meta {
+            margin: 0 0 14px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .thought-card .snippet {
+            margin: 0;
+            color: var(--text-main);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             #about {
@@ -200,6 +259,10 @@
 
             .social-links {
                 justify-content: center;
+            }
+
+            .thought-card {
+                grid-column: span 12;
             }
 
             header {
@@ -251,6 +314,7 @@
             <a href="#about">About</a>
             <a href="#research">Research</a>
             <a href="#projects">Projects</a>
+            <a href="#thoughts">Thoughts</a>
         </nav>
     </header>
 
@@ -262,10 +326,11 @@
             
             <div class="bio-content">
                 <h1>Hi, I'm Tyrone.</h1>
-                <p>I'm a student at <strong>Brown University</strong> studying Computer Science and Economics.</p>
-                <p>I'm a research assistant at Brown's E-GLAMOR Group. I'm interested in using LLMs for strategic game playing and multi-agent systems.</p>
+                <p>My initials are TKTS, hence the picture :></p>
+                <p>I'm a student at Brown University studying Computer Science and Economics.</p>
+                <p>I'm a research assistant at Brown's E-GLAMOR Group. I'm interested in developing strategic yet capable LLMs, drawing ideas from game theory and multi-agent systems.</p>
                 <p>Thanks for dropping by!</p>
-                
+
                 <div class="social-links">
                     <a href="https://github.com/tktserapio" aria-label="GitHub">
                         <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -286,7 +351,7 @@
             <div class="item-card">
                 <h3>Internalizing World Models for Game Playing in Lightweight Large Language Models</h3>
                 <p><b>Tyrone Serapio</b>, Haoyang Xu, Arjun Prakash, Amy Greenwald</p>
-                <p><i>AAMAS Strategic Engineering Workshop, 2026 (Poster)</i></p>
+                <p><i>AAMAS Strategic Engineering Workshop 2026 (Poster)</i></p>
                 <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">
                     arXiv
                     <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -296,7 +361,7 @@
             <div class="item-card">
                 <h3>Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning</h3>
                 <p>Naicheng He, Kaicheng Guo, Arjun Prakash, Saket Tiwari, Ruo Yu Tao, <b>Tyrone Serapio</b>, Amy Greenwald, George Konidaris</p>
-                <p><i>NeurIPS ARLET Workshop, 2025</i></p>
+                <p><i>NeurIPS ARLET Workshop 2025; Under review at ICML 2026</i></p>
                 <a href="https://arxiv.org/abs/2509.22335" class="card-link" target="_blank" rel="noopener noreferrer">
                     arXiv
                     <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -322,6 +387,18 @@
                 <a href="https://github.com/tktserapio/LLM-Prediction-Markets" class="card-link" target="_blank" rel="noopener noreferrer">
                     GitHub
                     <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="thoughts" class="content-section">
+            <h2 class="section-title">My thoughts on stuff...</h2>
+
+            <div class="thoughts-grid">
+                <a href="" class="thought-card">
+                    <h3>Are LLMs competitive debaters?</h3>
+                    <p class="meta">In progress...</p>
+                    <p class="snippet">How well can LLMs respond to strawmans? False dichotomies?</p>
                 </a>
             </div>
         </section>
