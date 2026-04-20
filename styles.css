@@ -1,0 +1,297 @@
+:root {
+    --bg-color: #f7f4ef;
+    --bg-accent-1: rgba(255, 214, 170, 0.55);
+    --bg-accent-2: rgba(193, 230, 255, 0.5);
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --border-color: rgba(31, 41, 55, 0.12);
+    --link-color: #111827;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: white;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Floating Centered Header */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+    width: calc(100% - 40px);
+    background: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-radius: 50px;
+    box-shadow: 0 14px 38px rgba(17, 24, 39, 0.1);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.46) 0%,
+        rgba(255, 255, 255, 0.06) 100%
+    );
+    pointer-events: none;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #6b7280;
+}
+
+/* Main Container for alignment */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- About / Hero Section --- */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.profile-img-wrapper {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 320px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.bio-content {
+    max-width: 500px;
+}
+
+.bio-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.bio-content p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.bio-content strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: var(--text-main);
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* --- General Section Styling (Research & Projects) --- */
+section.content-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+#thoughts {
+    padding-bottom: 100px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-main);
+}
+
+/* Placeholder Content Blocks for visual structure */
+.item-card {
+    margin-bottom: 30px; 
+    /* padding: 30px;
+    border-radius: 8px;
+    */
+}
+
+.item-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.item-card p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.thoughts-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+}
+
+.thought-card {
+    grid-column: span 6;
+    display: block;
+    padding: 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 18px 40px rgba(17, 24, 39, 0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thought-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 48px rgba(17, 24, 39, 0.1);
+}
+
+.thought-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+}
+
+.thought-card .meta {
+    margin: 0 0 14px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.thought-card .snippet {
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 40px 0;
+    }
+
+    .profile-img {
+        width: 280px;
+        height: 350px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .thought-card {
+        grid-column: span 12;
+    }
+
+    header {
+        top: 12px;
+        padding: 12px 20px;
+        max-width: calc(100% - 24px);
+        border-radius: 40px;
+    }
+}
+
+/* Styling for the aesthetic card links */
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card-link svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.2s ease; /* Smooth animation for the arrow */
+}
+
+.card-link:hover {
+    color: #6b7280; /* Fades slightly to match your muted text */
+}
+
+.card-link:hover svg {
+    transform: translate(3px, -3px); /* Slides the arrow up and right */
+}
