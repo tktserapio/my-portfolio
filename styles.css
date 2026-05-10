@@ -295,3 +295,18 @@ section.content-section {
 .card-link:hover svg {
     transform: translate(3px, -3px); /* Slides the arrow up and right */
 }
+
+/* Specific styling for the Amy link: black text, no underline; underline on hover */
+.amy-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.amy-link:hover,
+.amy-link:focus {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: var(--text-main);
+}
